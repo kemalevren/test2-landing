@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kemalevren.github.io/test2-landing/sitemap.xml

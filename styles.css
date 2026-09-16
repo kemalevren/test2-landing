@@ -1,4 +1,37 @@
 /* crew landing — tokenlar: açık tema :root, koyu tema media + data-theme */
+
+/* Fontlar self-host (OFL, bkz. fonts/OFL-*.txt). Her yüz tek woff2: sayfanın karakter kümesine
+   (Basic Latin, Latin-1, Türkçe ğ ş ı İ, tipografik tırnak/tire) göre alt kümelendi. Bricolage ve Plex Sans değişken;
+   eksenler yalnız kullanılan ağırlıklara daraltıldı. Kümede olmayan bir karakter sistem fontuna düşer. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 700 800;
+  font-display: swap;
+  src: url("fonts/bricolage-grotesque-700-800.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("fonts/ibm-plex-sans-400-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/ibm-plex-mono-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/ibm-plex-mono-500.woff2") format("woff2");
+}
+
 :root {
   --ground: #edf1f6;
   --ground-alt: #e3e9f1;
@@ -379,6 +412,9 @@ a { color: var(--accent); }
 .feature:nth-child(even) { padding-left: 2rem; padding-right: 0; border-left: 1px solid var(--line); }
 .feature h3 { font-size: 1.45rem; font-weight: 700; }
 .feature p:not(.feature__tag) { color: var(--muted); max-width: 48ch; }
+/* 5. kart tek başına sol sütunda kalmasın: iki sütuna yayılır, alt çizgi düzeni korunur */
+.feature--wide { grid-column: 1 / -1; padding-right: 0; }
+.feature--wide p:not(.feature__tag) { max-width: 72ch; }
 .feature__tag code { background: var(--accent-soft); color: var(--accent); }
 
 @media (max-width: 720px) {

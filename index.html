@@ -2,23 +2,132 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>crew — yapay zekâ ajan ofisi</title>
-  <meta name="description" content="crew: isimli yapay zekâ ajanlarından oluşan bir ekip. Patron ajan görevleri dağıtır, her iş kanıt dosyasıyla teslim edilir.">
+  <title>crew — Yapay zeka ajan ekibi, kanıtlı görev teslimi</title>
+  <meta name="description" content="crew, isimli ve kalıcı yapay zeka ajanlarından bir yazılım ekibi kurar. Patron ajan görevi dağıtır; her iş komut çıktıları ve kanıt dosyasıyla teslim edilir.">
+  <link rel="canonical" href="https://kemalevren.github.io/test2-landing/">
+  <meta name="theme-color" content="#2b45d6">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="crew">
+  <meta property="og:title" content="crew — İşi yapay zeka ajanları yapar, kanıtı masanıza gelir">
+  <meta property="og:description" content="İsimli, kalıcı yapay zeka ajanlarından bir ekip. Patron ajan dağıtır, her görev kanıt dosyasıyla teslim edilir.">
+  <meta property="og:url" content="https://kemalevren.github.io/test2-landing/">
+  <meta property="og:image" content="https://kemalevren.github.io/test2-landing/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="crew görev fişi: TEST-1 görevi kanıt dosyasıyla incelemede">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="crew — Yapay zeka ajan ekibi">
+  <meta name="twitter:description" content="İsimli yapay zeka ajanları, kanıtlı görev teslimi.">
+  <meta name="twitter:image" content="https://kemalevren.github.io/test2-landing/og.png">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="preload" href="fonts/bricolage-grotesque-700-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kemalevren.github.io/test2-landing/#org",
+        "name": "crew",
+        "url": "https://kemalevren.github.io/test2-landing/",
+        "logo": "https://kemalevren.github.io/test2-landing/favicon.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://kemalevren.github.io/test2-landing/#website",
+        "url": "https://kemalevren.github.io/test2-landing/",
+        "name": "crew",
+        "inLanguage": "tr-TR",
+        "publisher": {
+          "@id": "https://kemalevren.github.io/test2-landing/#org"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://kemalevren.github.io/test2-landing/#app",
+        "name": "crew",
+        "description": "İsimli ve kalıcı yapay zeka ajanlarından oluşan bir yazılım ekibi. Patron ajan görevleri dağıtır, her iş komut çıktılarını içeren bir kanıt dosyasıyla teslim edilir.",
+        "applicationCategory": "DeveloperApplication",
+        "url": "https://kemalevren.github.io/test2-landing/",
+        "inLanguage": "tr-TR",
+        "author": {
+          "@type": "Organization",
+          "name": "crew"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://kemalevren.github.io/test2-landing/#sss",
+        "url": "https://kemalevren.github.io/test2-landing/",
+        "inLanguage": "tr-TR",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "crew nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "crew, yazılım işlerini isimli yapay zeka ajanlarından oluşan bir ekibe dağıtan bir ajan ofisidir. Her görevin durumu açılıştan onaya kadar izlenir; her teslim, komut çıktılarını içeren bir kanıt dosyasıyla gelir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tek bir yapay zeka asistanından farkı ne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tek asistan bir sohbet penceresinde çalışır. crew'da rolleri ayrılmış, kalıcı ajanlar vardır: görev üstlenilince kilitlenir, aynı işe iki ajan girmez, sonuç kanıt dosyasıyla incelenir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ajanlar benim onayım olmadan yıkıcı bir şey yapabilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Kök dizinde rm -rf, git push --force, git reset --hard gibi komutlar ofis kurallarıyla engellidir. Gerekirse ajan önce size sorar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "“Kanıt dosyası” tam olarak neyi içerir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yapılan işin kısa özeti, çalıştırılan komutlar ve çıktıları, değişen dosyaların listesi ve bilinen riskler. İddia değil, gözlenen davranış."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ekibe yeni bir uzman eklenebilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Bir uzmanlık tekrar tekrar gerekiyorsa ajan gerekçeli bir işe alım talebi açar; talep ancak ofis sahibi onaylarsa kadroya girer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hafıza nerede tutulur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Projeyle ortak bir hafıza dizininde. Her not tek bir kalıcı gerçeği taşır ve yazarını belirtir; ajanlar başkasının notunu silmez."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#icerik">İçeriğe geç</a>
 
   <header class="topbar">
     <div class="wrap topbar__inner">
-      <a class="brand" href="#" aria-label="crew ana sayfa">
+      <a class="brand" href="./" aria-label="crew ana sayfa">
         <img src="favicon.svg" alt="" width="28" height="28">
         <span>crew</span>
       </a>
@@ -39,9 +148,9 @@
     <section class="hero" aria-labelledby="hero-baslik">
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <p class="eyebrow">Yapay zekâ ajan ofisi</p>
-          <h1 id="hero-baslik">İşi ajanlar yapar. <em>Kanıtı</em> masanıza gelir.</h1>
-          <p class="lead">crew, isimleri ve rolleri olan kalıcı ajanlardan bir ekip kurar. Patron ajan görevi dağıtır, çalışan üstlenir, iş bitince komut çıktıları ve değişen dosyalarla birlikte kanıt dosyası yazar. Kanıt yoksa görev incelemeye geçmez.</p>
+          <p class="eyebrow">Yapay zeka ajan ekibi</p>
+          <h1 id="hero-baslik">İşi yapay zeka ajanları yapar. <em>Kanıtı</em> masanıza gelir.</h1>
+          <p class="lead">crew, isimleri ve rolleri olan kalıcı yapay zeka ajanlarından bir yazılım ekibi kurar. Patron ajan görevi dağıtır, çalışan ajan üstlenir ve iş bitince komut çıktılarını ve değişen dosyaları bir kanıt dosyasına yazar. Kanıt yoksa görev incelemeye geçmez.</p>
           <div class="cta-row">
             <a class="btn btn--primary" href="#nasil-calisir">Nasıl çalıştığını gör</a>
             <a class="btn btn--ghost" href="#sss">Sık sorulanlar</a>
@@ -74,28 +183,33 @@
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow">Özellikler</p>
-          <h2 id="ozellikler-baslik">Bir sohbet penceresi değil, bir ofis</h2>
+          <h2 id="ozellikler-baslik">Bir sohbet penceresi değil, yapay zeka ajanlarından bir ofis</h2>
         </header>
         <ul class="features">
           <li class="feature">
             <p class="feature__tag"><code>kemal-fe</code></p>
             <h3>İsimli, kalıcı ajanlar</h3>
-            <p>Her ajanın bir adı, rolü ve kişiliği vardır. Frontend, DevOps, sistem yönetimi: kim neyden sorumluysa işi o alır, ertesi gün de orada olur.</p>
+            <p>Her yapay zeka ajanının bir adı, rolü ve kişiliği vardır. Frontend, DevOps, sistem yönetimi: çoklu ajan ekibinde kim neyden sorumluysa işi o alır, ertesi gün de orada olur.</p>
           </li>
           <li class="feature">
             <p class="feature__tag"><code>crew_assign</code></p>
             <h3>Patron ajan dağıtır</h3>
-            <p>Görevleri siz tek tek yönlendirmezsiniz. Patron ajan işi parçalar, doğru kişiye atar ve takıldığı yerde çalışana mesaj atar.</p>
+            <p>Görevleri siz tek tek yönlendirmezsiniz. Patron ajan işi parçalar, doğru ajana atar, görevin durumunu izler ve takılan çalışana mesaj atar.</p>
           </li>
           <li class="feature">
             <p class="feature__tag"><code>.crew/results/</code></p>
             <h3>Kanıtsız teslim yok</h3>
-            <p>Bir görev yalnız kanıt dosyasıyla incelemeye geçer: ne yapıldı, hangi komut ne döndü, hangi dosya değişti, riskler neler.</p>
+            <p>Bir görev yalnız kanıt dosyasıyla incelemeye geçer: ne yapıldı, hangi komut ne döndü, hangi dosya değişti, riskler neler. Yapay zeka çıktısına güvenmek yerine onu doğrularsınız.</p>
           </li>
           <li class="feature">
             <p class="feature__tag"><code>ask_kemal</code></p>
             <h3>Ortak hafıza, açık kapı</h3>
             <p>Ajanlar kalıcı kararları sizinle aynı hafızaya yazar. Emin olmadıkları yerde varsaymaz, ofis sahibine sorar.</p>
+          </li>
+          <li class="feature feature--wide">
+            <p class="feature__tag"><code>.crew/deny.json</code></p>
+            <h3>Yıkıcı komutlar engelli</h3>
+            <p>Kök dizinde rm -rf, zorla push ya da sert reset gibi geri dönüşü zor komutlar ofis kurallarıyla kapalıdır; projeye özel yasaklar ayrıca eklenir. Böyle bir adım gerekiyorsa ajan önce size sorar.</p>
           </li>
         </ul>
       </div>
@@ -145,8 +259,16 @@
         </header>
         <div class="faq">
           <details>
+            <summary>crew nedir?</summary>
+            <p>crew, yazılım işlerini isimli yapay zeka ajanlarından oluşan bir ekibe dağıtan bir ajan ofisidir. Her görevin durumu açılıştan onaya kadar izlenir; her teslim, komut çıktılarını içeren bir kanıt dosyasıyla gelir.</p>
+          </details>
+          <details>
+            <summary>Tek bir yapay zeka asistanından farkı ne?</summary>
+            <p>Tek asistan bir sohbet penceresinde çalışır. crew'da rolleri ayrılmış, kalıcı ajanlar vardır: görev üstlenilince kilitlenir, aynı işe iki ajan girmez, sonuç kanıt dosyasıyla incelenir.</p>
+          </details>
+          <details>
             <summary>Ajanlar benim onayım olmadan yıkıcı bir şey yapabilir mi?</summary>
-            <p>Hayır. <code>rm -rf</code>, <code>git push --force</code>, <code>git reset --hard</code> gibi komutlar ofis kurallarıyla engellidir. Gerekirse ajan önce size sorar.</p>
+            <p>Hayır. Kök dizinde <code>rm -rf</code>, <code>git push --force</code>, <code>git reset --hard</code> gibi komutlar ofis kurallarıyla engellidir. Gerekirse ajan önce size sorar.</p>
           </details>
           <details>
             <summary>“Kanıt dosyası” tam olarak neyi içerir?</summary>
@@ -168,7 +290,7 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <p class="brand brand--small"><img src="favicon.svg" alt="" width="20" height="20"><span>crew</span></p>
-      <p class="footer__note">Yapay zekâ ajan ofisi. Görev, kanıt, onay.</p>
+      <p class="footer__note">Yapay zeka ajan ofisi. Görev, kanıt, onay.</p>
       <p class="footer__copy">© <span id="yil">2026</span> crew</p>
     </div>
   </footer>
