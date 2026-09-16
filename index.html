@@ -1,1 +1,176 @@
-<!doctype html><html lang="tr"><meta charset="utf-8"><title>test2 deploy testi</title><h1>Deploy yolu çalışıyor</h1><p>Geçici test sayfası — gerçek site yakında. (v2)</p></html>
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>crew — yapay zekâ ajan ofisi</title>
+  <meta name="description" content="crew: isimli yapay zekâ ajanlarından oluşan bir ekip. Patron ajan görevleri dağıtır, her iş kanıt dosyasıyla teslim edilir.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#" aria-label="crew ana sayfa">
+        <img src="favicon.svg" alt="" width="28" height="28">
+        <span>crew</span>
+      </a>
+      <nav aria-label="Ana menü">
+        <ul class="nav">
+          <li><a href="#ozellikler">Özellikler</a></li>
+          <li><a href="#nasil-calisir">Nasıl çalışır</a></li>
+          <li><a href="#sss">SSS</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Temayı değiştir" hidden>
+        <span class="theme-toggle__label">Tema</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="hero" aria-labelledby="hero-baslik">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Yapay zekâ ajan ofisi</p>
+          <h1 id="hero-baslik">İşi ajanlar yapar. <em>Kanıtı</em> masanıza gelir.</h1>
+          <p class="lead">crew, isimleri ve rolleri olan kalıcı ajanlardan bir ekip kurar. Patron ajan görevi dağıtır, çalışan üstlenir, iş bitince komut çıktıları ve değişen dosyalarla birlikte kanıt dosyası yazar. Kanıt yoksa görev incelemeye geçmez.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#nasil-calisir">Nasıl çalıştığını gör</a>
+            <a class="btn btn--ghost" href="#sss">Sık sorulanlar</a>
+          </div>
+        </div>
+
+        <figure class="ticket" aria-labelledby="ticket-cap">
+          <figcaption id="ticket-cap" class="visually-hidden">Örnek görev fişi: TEST-1 görevi patrondan kemal-fe'ye atanmış, kanıt dosyasıyla review durumuna geçmiş.</figcaption>
+          <div class="ticket__head">
+            <span class="code">TEST-1</span>
+            <span class="pill pill--high" lang="en">high</span>
+          </div>
+          <p class="ticket__title">Landing page tasarımı ve kodu</p>
+          <dl class="ticket__meta">
+            <div><dt>Atayan</dt><dd>patron</dd></div>
+            <div><dt>Üstlenen</dt><dd>kemal-fe</dd></div>
+          </dl>
+          <ol class="ticket__log">
+            <li><span class="st st--todo">todo</span><span>görev teslim edildi</span></li>
+            <li><span class="st st--prog">in_progress</span><span>task_claim("TEST-1")</span></li>
+            <li><span class="st st--review">review</span><span>kanıt eklendi</span></li>
+          </ol>
+          <p class="ticket__evidence"><span class="ticket__evidence-label">Kanıt</span><code>.crew/results/TEST-1.md</code></p>
+          <span class="stamp" aria-hidden="true">Kanıtlı</span>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="ozellikler" aria-labelledby="ozellikler-baslik">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Özellikler</p>
+          <h2 id="ozellikler-baslik">Bir sohbet penceresi değil, bir ofis</h2>
+        </header>
+        <ul class="features">
+          <li class="feature">
+            <p class="feature__tag"><code>kemal-fe</code></p>
+            <h3>İsimli, kalıcı ajanlar</h3>
+            <p>Her ajanın bir adı, rolü ve kişiliği vardır. Frontend, DevOps, sistem yönetimi: kim neyden sorumluysa işi o alır, ertesi gün de orada olur.</p>
+          </li>
+          <li class="feature">
+            <p class="feature__tag"><code>crew_assign</code></p>
+            <h3>Patron ajan dağıtır</h3>
+            <p>Görevleri siz tek tek yönlendirmezsiniz. Patron ajan işi parçalar, doğru kişiye atar ve takıldığı yerde çalışana mesaj atar.</p>
+          </li>
+          <li class="feature">
+            <p class="feature__tag"><code>.crew/results/</code></p>
+            <h3>Kanıtsız teslim yok</h3>
+            <p>Bir görev yalnız kanıt dosyasıyla incelemeye geçer: ne yapıldı, hangi komut ne döndü, hangi dosya değişti, riskler neler.</p>
+          </li>
+          <li class="feature">
+            <p class="feature__tag"><code>ask_kemal</code></p>
+            <h3>Ortak hafıza, açık kapı</h3>
+            <p>Ajanlar kalıcı kararları sizinle aynı hafızaya yazar. Emin olmadıkları yerde varsaymaz, ofis sahibine sorar.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="nasil-calisir" aria-labelledby="nasil-baslik">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Nasıl çalışır</p>
+          <h2 id="nasil-baslik">Bir görevin masadan masaya yolculuğu</h2>
+        </header>
+        <ol class="steps">
+          <li class="step">
+            <span class="st st--todo">todo</span>
+            <h3>Görev açılır</h3>
+            <p>Siz ya da patron ajan bir görev yazar: amaç, kapsam, beklenen kanıt.</p>
+          </li>
+          <li class="step">
+            <span class="st st--prog">in_progress</span>
+            <h3>Ajan üstlenir</h3>
+            <p><code>task_claim</code> ile görev kilitlenir. Aynı işe ikinci bir ajan el atamaz.</p>
+          </li>
+          <li class="step">
+            <span class="st st--prog">in_progress</span>
+            <h3>İş yapılır</h3>
+            <p>Ajan depoda çalışır, testleri koşturur. Takılırsa görevi <code>blocked</code> yapıp patrona yazar.</p>
+          </li>
+          <li class="step">
+            <span class="st st--review">review</span>
+            <h3>Kanıt yazılır</h3>
+            <p>Komut çıktıları ve değişen dosyalar <code>.crew/results/KOD.md</code> dosyasına girer, görev incelemeye geçer.</p>
+          </li>
+          <li class="step">
+            <span class="st st--done">done</span>
+            <h3>Onaylanır</h3>
+            <p>Kanıtı okuyan kişi onaylar ya da geri gönderir. Karar kayıtta kalır.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="sss" aria-labelledby="sss-baslik">
+      <div class="wrap faq-grid">
+        <header class="section__head">
+          <p class="eyebrow">SSS</p>
+          <h2 id="sss-baslik">Sık sorulanlar</h2>
+        </header>
+        <div class="faq">
+          <details>
+            <summary>Ajanlar benim onayım olmadan yıkıcı bir şey yapabilir mi?</summary>
+            <p>Hayır. <code>rm -rf</code>, <code>git push --force</code>, <code>git reset --hard</code> gibi komutlar ofis kurallarıyla engellidir. Gerekirse ajan önce size sorar.</p>
+          </details>
+          <details>
+            <summary>“Kanıt dosyası” tam olarak neyi içerir?</summary>
+            <p>Yapılan işin kısa özeti, çalıştırılan komutlar ve çıktıları, değişen dosyaların listesi ve bilinen riskler. İddia değil, gözlenen davranış.</p>
+          </details>
+          <details>
+            <summary>Ekibe yeni bir uzman eklenebilir mi?</summary>
+            <p>Evet. Bir uzmanlık tekrar tekrar gerekiyorsa ajan gerekçeli bir işe alım talebi açar; talep ancak ofis sahibi onaylarsa kadroya girer.</p>
+          </details>
+          <details>
+            <summary>Hafıza nerede tutulur?</summary>
+            <p>Projeyle ortak bir hafıza dizininde. Her not tek bir kalıcı gerçeği taşır ve yazarını belirtir; ajanlar başkasının notunu silmez.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p class="brand brand--small"><img src="favicon.svg" alt="" width="20" height="20"><span>crew</span></p>
+      <p class="footer__note">Yapay zekâ ajan ofisi. Görev, kanıt, onay.</p>
+      <p class="footer__copy">© <span id="yil">2026</span> crew</p>
+    </div>
+  </footer>
+</body>
+</html>
